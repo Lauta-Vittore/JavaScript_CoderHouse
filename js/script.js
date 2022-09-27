@@ -1,5 +1,3 @@
-
-
 let precio = parseInt(prompt('Ingresa el precio del producto para calcular las cuotas'))
 
 while(isNaN(precio) || precio <=0 ){
@@ -10,6 +8,7 @@ let cuotas = parseInt(prompt('Ingresa cantidad de cuotas:\n 1 cuota: sin interé
 while( !(cuotas == 1 || cuotas == 3 || cuotas == 6 || cuotas == 12) || isNaN(precio) ){
     cuotas = parseInt(prompt('Dato incorrecto!\nIngresa cantidad de cuotas:\n 1 cuota: sin interés\n 3 cuotas: 5% de interes\n 6 cuotas: 10% de interés\n 12 cuotas: 15% de interés'))
 }
+
 let precioConInteres = precioInteres( precio, cuotas)
 
 alert('el precio con interes incluido es: $' + precioConInteres.toFixed(2) + '\n La cuota es de: $' + (precioConInteres/cuotas).toFixed(2))
