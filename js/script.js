@@ -16,7 +16,7 @@ alert('el precio con interes incluido es: $' + precioConInteres.toFixed(2) + '\n
 function precioInteres(precio, cuotas){
     let interes = 0
     switch(cuotas){
-        case 1: 
+        case 1:  
             interes = precio
             break
         case 3: 
