@@ -5,8 +5,10 @@ let stock = [
     {nombre: 'cuellito', precio: 1000},
 ] 
 
-let producto = prompt('ingresar producto a comprar:\n 1 - remera \n 2 - buzo \n 3 - zapatillas \n 4 - cuellito' )
-
+let producto = prompt('ingresar producto a comprar:\n - remera \n  - buzo \n  - zapatillas \n  - cuellito' )
+while( !(producto == 'remera' || producto == 'buzo' || producto == 'zapatillas' || producto == 'cuellito') ){
+    producto = prompt('Dato incorrecto!\ningresar producto a comprar:\n - remera \n  - buzo \n  - zapatillas \n  - cuellito')
+}
 const resultado = stock.find( productos => productos.nombre === producto)
 console.log(resultado.precio);
 
