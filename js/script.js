@@ -1,7 +1,7 @@
 let stock = [
-    {nombre: 'remera', precio: 1500, talla: 'xl'},
-    {nombre: 'buzo', precio: 4500, talla: 's'},
-    {nombre: 'zapatillas', precio: 11000, talla: '42'},
+    {nombre: 'remera', precio: 1500},
+    {nombre: 'buzo', precio: 4500},
+    {nombre: 'zapatillas', precio: 11000},
     {nombre: 'cuellito', precio: 1000},
 ] 
 
