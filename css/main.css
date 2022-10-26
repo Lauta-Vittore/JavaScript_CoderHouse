@@ -69,6 +69,21 @@ body {
         color: white; }
       .row .navbar .collapse .conteiner .navbar-nav .dropdown-menu a {
         color: black; }
+      .row .navbar .collapse .conteiner .navbar-nav img {
+        transition: transform .2s; }
+      .row .navbar .collapse .conteiner .navbar-nav img:hover {
+        transform: scale(1.5); }
+      .row .navbar .collapse .conteiner .navbar-nav span {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        text-align: center;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        left: -10px;
+        top: -5px; }
       .row .navbar .collapse .cuenta {
         text-align: center; }
         .row .navbar .collapse .cuenta .btnCuenta {
@@ -566,7 +581,7 @@ main .categoria {
   .paraTi .container {
     position: relative;
     margin: 20px;
-    width: 30%; }
+    width: 350px; }
     .paraTi .container .card {
       position: relative;
       width: 100%;
@@ -760,6 +775,7 @@ main .categoria {
 /* pag productos */
 .seccionProductos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
   overflow: hidden;
@@ -1040,7 +1056,7 @@ main .categoria {
   .seccionProductos .container {
     position: relative;
     margin: 20px;
-    width: 30%; }
+    width: 350px; }
     .seccionProductos .container .card {
       position: relative;
       width: 100%;
@@ -1449,6 +1465,13 @@ footer {
     list-style: none; }
 
 /* termina css footer */
+/* carrito */
+.submenu {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  list-style: none; }
+
 /* VISTA PARA MOVILE */
 @media (max-width: 768px) {
   body {

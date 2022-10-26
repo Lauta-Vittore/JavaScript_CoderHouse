@@ -17,48 +17,8 @@
 </head>
 <body>
     
-    <header class="row">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand name col-1" href="#">Bukee</a>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse col_3" id="navbarScroll">
-                <div class="conteinerBuscador col-6">
-                    <input type="text" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="pic/lupa.png" alt="" style="width: 17px;"></label>
-                </div>
-                <div class="conteiner col-6">
-                    
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 col" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/Contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Más
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="pages/sobreNosotros.html">Sobre Nosotros</a></li>
-                        <li><a class="dropdown-item" href="pages/preguntas.html">Preguntas frecuentes</a></li>
-                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal3">Contacto Soporte</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="pic/carro-de-compras.png" style="width:25px;" alt=""></a>
-                    </li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
+    <header class="row" id="domNav">
+        
     </header>
     
     <main>
@@ -67,7 +27,6 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <video src="pic/video.mp4" class="d-block w-100" autoplay muted loop></video>
-                <!-- <img src="pic/Banner 1.png" class="d-block w-100" alt="..."> -->
               </div>
               <div class="carousel-item">
                 <img src="pic/Banner 2.png" class="d-block w-100" alt="bannerPublicitario">
@@ -117,245 +76,38 @@
             
         </section>
         <h1 class="titulo" id="paraTi">Productos para ti</h1>
-        <section class="paraTi">
-            <div class="container">
-                <div class="card">
-                    
-                    <div class="imgBx">
-                        
-                        <img src="../pic/buzo8.webp" alt="buzo rosa&negro">
-                        
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>MaxiBuzo</h2>
-                        </div>
-                        <div class="color"> 
-                            <h3>Buzo de algodón frizado color rosa con mangas negras</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>S</span>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>XL</span>
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="../pic/remera1.webp" alt="remera gris">
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>Remera-Gris</h2>
-                
-                        </div>
-                        <div class="color"> 
-                            <h3>Remera modal color gris</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>S</span>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>XL</span>
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>    
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx zapas">
-                        <img src="../pic/zapatillas3w.webp" alt="zapatillas naranja">
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>Nike air max</h2>
-                
-                        </div>
-                        <div class="color"> 
-                            <h3>Zapatillas deportivas nike air max color naranja</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>36</span>
-                            <span>38</span>
-                            <span>40</span>
-                            <span>42</span>
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
+        <section class="paraTi" id="domParaTi">
+            <!-- card de productos en seccion para ti -->
         </section>
         <h2 class="titulo" id="masVendidos">Más vendidos</h2>
-        <section class="paraTi">
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx zapas">
-                        <img src="../pic/zapatillas4w.webp" alt="zapatillas verde&celeste">
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>Nike air max</h2>
-                
-                        </div>
-                        <div class="color"> 
-                            <h3>Zapatillas deportivas nike air max color verde&celeste</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>36</span>
-                            <span>38</span>
-                            <span>40</span>
-                            <span>42</span>
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="../pic/accesorio2-1w.webp" alt="accesorio" class="accesorio">
-                        <img src="../pic/accesorio2-2w.webp" alt="accesorio" class="accesorio2">
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>Lexa Chain</h2>
-                
-                        </div>
-                        <div class="color"> 
-                            <h3>Arnés de lencería "Lexa Chain" regulable color rojo</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>Reg</span>
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-            <div class="container">
-                <div class="card">
-                    
-                    <div class="imgBx">
-                        
-                        <img src="../pic/cuellito5.webp" alt="cuellito celeste">
-                        
-                    </div>
-                    <div class="contentBx">
-                        <div class="title">
-                            <h2>Cuellito polar</h2>
-                        </div>
-                        <div class="color"> 
-                            <h3>Cuellito polar "infinito" color celeste</h3>
-                        </div>
-                        <div class="size">
-                            <h3>tallas</h3>
-                            <span>x</span>
-                            
-                        </div>
-                        <div class="buy">
-                            <div class="price">
-                               
-                                <span>$651. <small>55</small> </span>
-                            </div>
-                            <ul class="action">
-                                <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
-                                
-                                <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
-                                
-                                <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
-                                
-                            </ul>
-                            <button class="btnVerProducto">Comprar</button>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-            
+        <section class="paraTi" id="domMasVendido">
+            <!-- card de productos en seccion mas vendidos -->
+        </section>
+        <h2 class="titulo" id="productos">Todos los productos</h2>
+        <section class="seccionProductos" id="domProductos">
+                <div class="conteinerTitulo2">
+                <h1 class="titulo2" id="buzos">Buzos</h1></div><hr>
+                <section class="seccionProductos" id="domBuzo">
+                    <!-- card productos buzo -->
+                </section>
+                <hr><h2 class="titulo2" id="remeras">Remeras</h2><hr>
+                <section class="seccionProductos" id="domRemeras">
+                    <!-- card remeras -->
+                </section>
+                <hr><h2 class="titulo2" id="cuellitos">Cuellitos</h2><hr>
+                <section class="seccionProductos" id="domCuellito">
+                    <!-- card cuellitos -->
+                </section>
+                <hr><h2 class="titulo2" id="calzado">Calzados</h2><hr>
+                <section class="seccionProductos" id="domZapatillas">
+                    <!-- zapas -->
+                   
+                </section>
+                <hr><h2 class="titulo2" id="accesorios">Accesorios</h2><hr>
+                <section class="seccionProductos" id="domAccesorio">
+                    <!-- accesorio -->  
+                </section>
+            <!-- card de productos en seccion mas vendidos -->
         </section>
         
 <!-- Modal -->
@@ -408,5 +160,7 @@
     
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="js/nav.js"></script>
+<script src="js/dom.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Lauta-Vittore/CoderHouse_desafios#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20",
+    "nodesass": "^0.0.2-security"
   }
 }

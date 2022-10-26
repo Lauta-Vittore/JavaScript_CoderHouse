@@ -55,7 +55,8 @@ body{
 /* pag productos */
 .seccionProductos{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around; 
     width: 100%;
     overflow: hidden;
     h3{
@@ -292,6 +293,13 @@ body{
 }
 @import "footer";
 
+/* carrito */
+.submenu {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    list-style:none;
+}
 
 /* VISTA PARA MOVILE */
 
