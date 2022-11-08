@@ -159,7 +159,7 @@ let productos = [
         descripcion: "Accesorio",
         talla: "L",
         precio: 1111,
-        foto: "../../pic/accesorio3-1w.webp",
+        foto: "pic/accesorio3-1w.webp",
         seccion: "",
         tipo: "accesorio",
         cantidad: 1,
