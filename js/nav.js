@@ -10,7 +10,7 @@ domNav.innerHTML += `
   </button>
   <div class="collapse navbar-collapse col_3" id="navbarScroll">
     <div class="conteinerBuscador col-6">
-        <input type="text" id="formulario" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="../pic/lupa.png" id="boton" alt="" style="width: 17px;"></label>
+        <input type="text" id="formulario" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="pic/lupa.png" id="boton" alt="" style="width: 17px;"></label>
     </div>
     <div class="conteiner col-6">
         

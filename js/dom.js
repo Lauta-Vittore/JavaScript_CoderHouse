@@ -64,11 +64,11 @@ function printData(object) {
                                     <span>$${element.precio}</span>
                                 </div>
                                 <ul class="action">
-                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
+                                    <li><a href="#" ><img src="pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
                                     
-                                    <li><a href="#" class="verProducto" id="${element.id}"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                                    <li><a href="#" class="verProducto" id="${element.id}"><img src="pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
                                     
-                                    <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                                    <li><a href="#"><img src="pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
                                     
                                 </ul>
                                 <a href="#" class="btnVerProducto agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Comprar</a>
@@ -111,11 +111,11 @@ function printData(object) {
                                     <span>$${element.precio}</span>
                                 </div>
                                 <ul class="action">
-                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
+                                    <li><a href="#" ><img src="pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
                                     
-                                    <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                                    <li><a href="#"><img src="pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
                                     
-                                    <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                                    <li><a href="#"><img src="pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
                                     
                                 </ul>
                                 <a href="#" class="btnVerProducto agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Comprar</a>
