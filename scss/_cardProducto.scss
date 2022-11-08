@@ -1,107 +1,4 @@
 
- /*    .card{
-        width: 30%;
-        overflow: hidden;  
-        margin-bottom: 10px;  
-        .conteinerImg{
-            overflow: hidden;
-            .imgProducto{
-                width: 100%;
-                transition: 0.5s;
-            }
-            .imgProducto1{
-                width: 100%;
-            }
-            .imgProducto2{
-                display: none;
-                width: 100%;
-            }
-            .action{
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                li{
-                    position: relative;
-                    list-style: none;
-                    width: 40px;
-                    height: 40px;
-                    background: white;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 4px;
-                    cursor: pointer;
-                    opacity: 0;
-                    transition: 0.5s;
-                    span{
-                        position: absolute;
-                        right: 50px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        white-space: nowrap;
-                        padding: 4px 60px;
-                        background-color: white;
-                        color: #333;
-                        font-weight: 500;
-                        font-size: 12px;
-                        border-radius: 4px;
-                        pointer-events: none;
-                        opacity: 0;
-                        transition: 0.5s;
-                    }
-                }
-                li:hover{
-                    background-color: red;
-                    color: white;
-                    span{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .btnVerProducto{
-            background-image: linear-gradient(to right, orange, rgb(255, 136, 0));
-            border-radius: 6px;
-            color: white;
-            font-weight: 700;
-            width: 60%;
-            height: 35px;
-            transition: 0.1s;
-            float: right;
-            font-size:15px;
-        
-        }
-        .btnVerProducto:hover{
-            background-image: linear-gradient(to right, black , orange);
-        }
-        .precio{
-            margin-left: 10px;
-            color: rgb(59, 59, 59);
-        }
-        .card-text{
-            margin-left: 2px;
-            margin-bottom: 20px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-    }
-    .card:hover{
-        .imgProducto{
-        transform: scale(1.5);
-        }
-        .imgProducto1{
-            display: none;
-        }
-        .imgProducto2{
-            display: flex;
-        }
-        .action li{
-            opacity: 1;
-        }
-
-    }
-  */
-
  .container {
     position: relative;
     margin: 20px;
@@ -110,7 +7,7 @@
         position: relative;
         width: 100%;
         height: 450px;
-        background: #1a1a1a;
+        background: #db7500;
         border-radius: 20px;
         overflow: hidden;
         &:before {
@@ -120,7 +17,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: orange;
+            background: rgb(255, 185, 79);
             clip-path: circle( 150px at 80% 20%);
             transition: 0.5s ease-in-out;
         }
@@ -219,7 +116,7 @@
                 position: relative;
                 font-weight: 600;
                 letter-spacing: 5px;
-                color: #fff;
+                color: rgb(0, 0, 0);
             }
             .color, .size {
                 display: flex;
@@ -230,7 +127,7 @@
                 opacity: 0;
                 visibility: hidden;
                 h3 {
-                    color: white;
+                    color: rgb(0, 0, 0);
                     font-weight: 300;
                     font-size: 10px;
                     text-transform: uppercase;
@@ -245,11 +142,10 @@
                     line-height: 26px;
                     font-size: 14px;
                     display: inline-block;
-                    color: #111;
-                    background: #fff;
+                    color: rgb(255, 255, 255);
+                    background: rgb(0, 0, 0);
                     margin: 0 5px;
                     transition: .5s;
-                    color: #111;
                     border-radius: 4px;
                     cursor: pointer;
                     &:hover {  /* other bug */
@@ -277,7 +173,7 @@
             .buy{ 
                 .price{
                     font-size: 25px;
-                    color: white;
+                    color: rgb(0, 0, 0);
                 }
                 .action{
                     position: absolute;
@@ -296,6 +192,9 @@
                         cursor: pointer;
                         opacity: 0;
                         transition: 0.5s;
+                        a{
+                            position: relative;
+                        }
                         span{
                             position: absolute;
                             right: 50px;

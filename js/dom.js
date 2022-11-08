@@ -1,3 +1,4 @@
+import productos from './db/db.js';
 let domParaTi = document.querySelector("#domParaTi");        
 let domMasVendido = document.querySelector("#domMasVendido")
 let domProductos = document.querySelector("#domProductos")
@@ -7,180 +8,13 @@ let domZapatillas = document.querySelector("#domZapatillas")
 let domAccesorio = document.querySelector("#domAccesorio")
 let domCuellito = document.querySelector("#domCuellito")
 
-let  = document.querySelector("#listaCarrito");
+let listaCarrito = document.querySelector("#listaCarrito");
 let productosSeleccionados = [];
 let botonVaciar= document.getElementById('vaciar-carrito')
 let contadorCarrito = document.getElementById('contadorCarrito')
 let precioTotal = document.getElementById('precioTotal')
-//creo el json de objetos de los productos
-let productos = [
-    {
-        id: "0",
-        titulo: "MaxiBuzo",
-        descripcion: "BUZO DE ALGODÓN FRIZADO COLOR ROSA CON MANGAS NEGRAS",
-        talla: "S",
-        precio: 1111,
-        foto: "../pic/buzo8.webp",
-        seccion: "paraTi",
-        tipo: "buzo",
-        cantidad: 1,
-    },
-    {
-        id: "1",
-        titulo: "MaxiBuzo",
-        descripcion: "BUZO DE ALGODÓN FRIZADO COLOR ROSA",
-        talla: "M",
-        precio: 1111,
-        foto: "../pic/buzo6.webp", 
-        seccion: "",
-        tipo: "buzo",
-        cantidad: 1,
-    },
-    {
-        id: "2",
-        titulo: "MaxiBuzo",
-        descripcion: "BUZO DE ALGODÓN FRIZADO COLOR NEGRO",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/buzo4.webp",
-        seccion: "",
-        tipo: "buzo",
-        cantidad: 1,
-    },
-    {
-        id: "3",
-        titulo: "Remera",
-        descripcion: "Remera de modal",
-        talla: "S",
-        precio: 1111,
-        foto: "../pic/remera1.webp",
-        seccion: "",
-        tipo: "remera",
-        cantidad: 1,
-    },
-    {
-        id: "4",
-        titulo: "Remera",
-        descripcion: "Remera de modal",
-        talla: "M",
-        precio: 1111,
-        foto: "../pic/remera2.webp",
-        seccion: "masVendido",
-        tipo: "remera",
-        cantidad: 1,
-    },
-    {
-        id: "5",
-        titulo: "Remera",
-        descripcion: "Remera de modal",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/remera3.webp",
-        seccion: "paraTi",
-        tipo: "remera",
-        cantidad: 1,
-    },
-    {
-        id: "6",
-        titulo: "Zapatillas",
-        descripcion: "ZAPATILLAS NIKE MODELO XXXXX",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/zapatillas2w.webp",
-        seccion: "paraTi",
-        tipo: "zapatilla",
-        cantidad: 1,
-    },
-    {
-        id: "7",
-        titulo: "Zapatillas",
-        descripcion: "ZAPATILLAS NIKE MODELO XXXXX",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/zapatillas3w.webp",
-        seccion: "",
-        tipo: "zapatilla",
-        cantidad: 1,
-    },
-    {
-        id: "8",
-        titulo: "Zapatillas",
-        descripcion: "ZAPATILLAS NIKE MODELO XXXXX",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/zapatillas4w.webp",
-        seccion: "",
-        tipo: "zapatilla",
-        cantidad: 1,
-    },
-    {
-        id: "9",
-        titulo: "Cuellito polar",
-        descripcion: "Cuellito polar color",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/cuellito3.webp",
-        seccion: "",
-        tipo: "cuellito",
-        cantidad: 1,
-    },
-    {
-        id: "10",
-        titulo: "Cuellito polar",
-        descripcion: "Cuellito polar color",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/cuellito4.webp",
-        seccion: "masVendido",
-        tipo: "cuellito",
-        cantidad: 1,
-    },
-    {
-        id: "11",
-        titulo: "Cuellito polar",
-        descripcion: "Cuellito polar color",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/cuellito5.webp",
-        seccion: "",
-        tipo: "cuellito",
-        cantidad: 1,
-    },
-    {
-        id: "12",
-        titulo: "Lexa Chain",
-        descripcion: "accesorio lexa chain",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/accesorio2-1w.webp",
-        seccion: "masVendido",
-        tipo: "accesorio",
-        cantidad: 1,
-    },
-    {
-        id: "13",
-        titulo: "Accesorio",
-        descripcion: "Accesorio",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/accesorio1w.webp",
-        seccion: "",
-        tipo: "accesorio",
-        cantidad: 1,
-    },
-    {
-        id: "14",
-        titulo: "Accesorio",
-        descripcion: "Accesorio",
-        talla: "L",
-        precio: 1111,
-        foto: "../pic/accesorio3-1w.webp",
-        seccion: "",
-        tipo: "accesorio",
-        cantidad: 1,
-    },
-    
-]
+let tallasId = document.getElementById('#tallasId')
+
 
 
 document.addEventListener("DOMContentLoaded", () => {                              //carga el contenido
@@ -203,7 +37,7 @@ function sincronizarConLocalStorage(){
 function printData(object) {
     object.forEach((element) => {
         const div = document.createElement('div')           
-        div.classList.add('container')                     //creo un div con la clase container y le inserto la card de productos
+        div.classList.add('container')                    //creo un div con la clase container y le inserto la card de productos
         div.innerHTML += `
             
                     <div class="card">
@@ -230,7 +64,7 @@ function printData(object) {
                                     <span>$${element.precio}</span>
                                 </div>
                                 <ul class="action">
-                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"><span>Añadir al carrito</span></li></a>
+                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
                                     
                                     <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
                                     
@@ -277,7 +111,7 @@ function printData(object) {
                                     <span>$${element.precio}</span>
                                 </div>
                                 <ul class="action">
-                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"><span>Añadir al carrito</span></li></a>
+                                    <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
                                     
                                     <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
                                     
@@ -290,13 +124,17 @@ function printData(object) {
                     
                     </div>
             `;
-            
-             lugarDeDom(element, div);       // llamo a la funcion para dividir en que lugar va la card
-          
+           
+
+        
+            lugarDeDom(element, div);   // llamo a la funcion para dividir en que lugar va la card
+
              
     });
     
 }
+ 
+
 function lugarDeProd(element, div) {
     if (element.tipo == "remera") {     // si la seccion es para ti se inserta en la seccion para ti 
         domRemeras.appendChild(div)
@@ -334,14 +172,14 @@ function agregarProductoAlcarro() {
         listaCarrito.innerHTML += `<tr>
             <td><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="60px"></td>
             <td>${element.titulo}</td>
-            <td class="text-center">${element.precio}$</td>
+            <td class="text-center">$${element.precio * element.cantidad}</td>
             <td class="text-center"><span id="cantidad">${element.cantidad}</span></td>
             <td class="text-center" ><a href="#" id="${element.id}" class="borrar-curso" data-id="1">X</a></td>
           </tr>`;
     });
 
     contadorCarrito.innerText = productosSeleccionados.length
-    precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + prod.precio, 0)
+    precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)
     // Seleccionamos el boton eliminar 
     let buttonDelete = document.querySelectorAll('#listaCarrito tr td a');
     
@@ -366,7 +204,6 @@ function agregarProductoAlcarro() {
 
 
 function buscarProductos ( idProducto, buscarProducto ){
-
     const existe = productosSeleccionados.some(prod => prod.id === idProducto)
     if(existe){
         const prod = productosSeleccionados.map (prod =>{
@@ -390,16 +227,24 @@ function buscarProductos ( idProducto, buscarProducto ){
     agregarProductoAlcarro();
 };
 
+
 printData(productos)
+escucharBoton()
 const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)};
 guardarLocal("listaProductos", JSON.stringify(productos))
-let buttonCard = document.querySelectorAll(" .agregarCarro");
 
-// Recorremos los botones asocimaos a un escuchador de eventos
-buttonCard.forEach((element) => {
-    element.addEventListener("click", (e) => {
-        e.preventDefault();
-        let id = e.target.id;
-        buscarProductos(id, productos);
+
+function escucharBoton() {
+    let buttonCard = document.querySelectorAll(".agregarCarro");
+    
+    // Recorremos los botones asocimaos a un escuchador de eventos
+    buttonCard.forEach((element) => {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            let id = e.target.id;
+            buscarProductos(id, productos);
+        });
     });
-});
+}
+
+export default escucharBoton;

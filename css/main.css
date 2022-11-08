@@ -13,7 +13,7 @@
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgba(212, 212, 212, 0.801);
+  background-color: #20052c;
   width: 100%; }
   body a {
     color: white;
@@ -36,7 +36,7 @@ body {
   width: 100%;
   margin: 0; }
   .row .navbar {
-    background-image: linear-gradient(to right, orange, orange, black); }
+    background-image: linear-gradient(to right, #db7500, #ffb94f, #db7500); }
     .row .navbar a {
       color: white;
       text-decoration: none; }
@@ -57,12 +57,7 @@ body {
     .row .navbar .collapse {
       color: white;
       justify-content: space-between;
-      width: 100%;
-      /* span{
-                position: absolute;
-                left: calc(50% - 2px);
-                top: 60px;
-            } */ }
+      width: 100%; }
       .row .navbar .collapse .conteiner ul {
         justify-content: center; }
       .row .navbar .collapse .conteiner .navbar-nav a {
@@ -306,108 +301,6 @@ main .categoria {
   justify-content: space-around;
   width: 100%;
   overflow: hidden;
-  /*    .card{
-        width: 30%;
-        overflow: hidden;  
-        margin-bottom: 10px;  
-        .conteinerImg{
-            overflow: hidden;
-            .imgProducto{
-                width: 100%;
-                transition: 0.5s;
-            }
-            .imgProducto1{
-                width: 100%;
-            }
-            .imgProducto2{
-                display: none;
-                width: 100%;
-            }
-            .action{
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                li{
-                    position: relative;
-                    list-style: none;
-                    width: 40px;
-                    height: 40px;
-                    background: white;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 4px;
-                    cursor: pointer;
-                    opacity: 0;
-                    transition: 0.5s;
-                    span{
-                        position: absolute;
-                        right: 50px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        white-space: nowrap;
-                        padding: 4px 60px;
-                        background-color: white;
-                        color: #333;
-                        font-weight: 500;
-                        font-size: 12px;
-                        border-radius: 4px;
-                        pointer-events: none;
-                        opacity: 0;
-                        transition: 0.5s;
-                    }
-                }
-                li:hover{
-                    background-color: red;
-                    color: white;
-                    span{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .btnVerProducto{
-            background-image: linear-gradient(to right, orange, rgb(255, 136, 0));
-            border-radius: 6px;
-            color: white;
-            font-weight: 700;
-            width: 60%;
-            height: 35px;
-            transition: 0.1s;
-            float: right;
-            font-size:15px;
-        
-        }
-        .btnVerProducto:hover{
-            background-image: linear-gradient(to right, black , orange);
-        }
-        .precio{
-            margin-left: 10px;
-            color: rgb(59, 59, 59);
-        }
-        .card-text{
-            margin-left: 2px;
-            margin-bottom: 20px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-    }
-    .card:hover{
-        .imgProducto{
-        transform: scale(1.5);
-        }
-        .imgProducto1{
-            display: none;
-        }
-        .imgProducto2{
-            display: flex;
-        }
-        .action li{
-            opacity: 1;
-        }
-
-    }
-  */
   /* .container .card {
     position: relative;
     width: 320px;
@@ -586,7 +479,7 @@ main .categoria {
       position: relative;
       width: 100%;
       height: 450px;
-      background: #1a1a1a;
+      background: #db7500;
       border-radius: 20px;
       overflow: hidden; }
       .paraTi .container .card:before {
@@ -596,7 +489,7 @@ main .categoria {
         left: 0;
         width: 100%;
         height: 100%;
-        background: orange;
+        background: #ffb94f;
         clip-path: circle(150px at 80% 20%);
         transition: 0.5s ease-in-out; }
       .paraTi .container .card:after {
@@ -668,7 +561,7 @@ main .categoria {
           position: relative;
           font-weight: 600;
           letter-spacing: 5px;
-          color: #fff; }
+          color: black; }
         .paraTi .container .card .contentBx .color, .paraTi .container .card .contentBx .size {
           display: flex;
           justify-content: center;
@@ -678,7 +571,7 @@ main .categoria {
           opacity: 0;
           visibility: hidden; }
           .paraTi .container .card .contentBx .color h3, .paraTi .container .card .contentBx .size h3 {
-            color: white;
+            color: black;
             font-weight: 300;
             font-size: 10px;
             text-transform: uppercase; }
@@ -689,11 +582,10 @@ main .categoria {
           line-height: 26px;
           font-size: 14px;
           display: inline-block;
-          color: #111;
-          background: #fff;
+          color: white;
+          background: black;
           margin: 0 5px;
           transition: .5s;
-          color: #111;
           border-radius: 4px;
           cursor: pointer; }
           .paraTi .container .card .contentBx .size span:hover {
@@ -713,7 +605,7 @@ main .categoria {
           cursor: pointer; }
         .paraTi .container .card .contentBx .buy .price {
           font-size: 25px;
-          color: white; }
+          color: black; }
         .paraTi .container .card .contentBx .buy .action {
           position: absolute;
           bottom: 300px;
@@ -731,6 +623,8 @@ main .categoria {
             cursor: pointer;
             opacity: 0;
             transition: 0.5s; }
+            .paraTi .container .card .contentBx .buy .action li a {
+              position: relative; }
             .paraTi .container .card .contentBx .buy .action li span {
               position: absolute;
               right: 50px;
@@ -765,11 +659,13 @@ main .categoria {
 
 /* pagina productos */
 .titulo2 {
+  width: 100%;
   position: static;
   text-align: center;
   font-size: 60px;
   font-weight: 600;
   font-family: 'Cedarville Cursive', cursive;
+  color: white;
   margin: 20px; }
 
 /* pag productos */
@@ -779,108 +675,6 @@ main .categoria {
   justify-content: space-around;
   width: 100%;
   overflow: hidden;
-  /*    .card{
-        width: 30%;
-        overflow: hidden;  
-        margin-bottom: 10px;  
-        .conteinerImg{
-            overflow: hidden;
-            .imgProducto{
-                width: 100%;
-                transition: 0.5s;
-            }
-            .imgProducto1{
-                width: 100%;
-            }
-            .imgProducto2{
-                display: none;
-                width: 100%;
-            }
-            .action{
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                li{
-                    position: relative;
-                    list-style: none;
-                    width: 40px;
-                    height: 40px;
-                    background: white;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 4px;
-                    cursor: pointer;
-                    opacity: 0;
-                    transition: 0.5s;
-                    span{
-                        position: absolute;
-                        right: 50px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        white-space: nowrap;
-                        padding: 4px 60px;
-                        background-color: white;
-                        color: #333;
-                        font-weight: 500;
-                        font-size: 12px;
-                        border-radius: 4px;
-                        pointer-events: none;
-                        opacity: 0;
-                        transition: 0.5s;
-                    }
-                }
-                li:hover{
-                    background-color: red;
-                    color: white;
-                    span{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .btnVerProducto{
-            background-image: linear-gradient(to right, orange, rgb(255, 136, 0));
-            border-radius: 6px;
-            color: white;
-            font-weight: 700;
-            width: 60%;
-            height: 35px;
-            transition: 0.1s;
-            float: right;
-            font-size:15px;
-        
-        }
-        .btnVerProducto:hover{
-            background-image: linear-gradient(to right, black , orange);
-        }
-        .precio{
-            margin-left: 10px;
-            color: rgb(59, 59, 59);
-        }
-        .card-text{
-            margin-left: 2px;
-            margin-bottom: 20px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-    }
-    .card:hover{
-        .imgProducto{
-        transform: scale(1.5);
-        }
-        .imgProducto1{
-            display: none;
-        }
-        .imgProducto2{
-            display: flex;
-        }
-        .action li{
-            opacity: 1;
-        }
-
-    }
-  */
   /* .container .card {
     position: relative;
     width: 320px;
@@ -1061,7 +855,7 @@ main .categoria {
       position: relative;
       width: 100%;
       height: 450px;
-      background: #1a1a1a;
+      background: #db7500;
       border-radius: 20px;
       overflow: hidden; }
       .seccionProductos .container .card:before {
@@ -1071,7 +865,7 @@ main .categoria {
         left: 0;
         width: 100%;
         height: 100%;
-        background: orange;
+        background: #ffb94f;
         clip-path: circle(150px at 80% 20%);
         transition: 0.5s ease-in-out; }
       .seccionProductos .container .card:after {
@@ -1143,7 +937,7 @@ main .categoria {
           position: relative;
           font-weight: 600;
           letter-spacing: 5px;
-          color: #fff; }
+          color: black; }
         .seccionProductos .container .card .contentBx .color, .seccionProductos .container .card .contentBx .size {
           display: flex;
           justify-content: center;
@@ -1153,7 +947,7 @@ main .categoria {
           opacity: 0;
           visibility: hidden; }
           .seccionProductos .container .card .contentBx .color h3, .seccionProductos .container .card .contentBx .size h3 {
-            color: white;
+            color: black;
             font-weight: 300;
             font-size: 10px;
             text-transform: uppercase; }
@@ -1164,11 +958,10 @@ main .categoria {
           line-height: 26px;
           font-size: 14px;
           display: inline-block;
-          color: #111;
-          background: #fff;
+          color: white;
+          background: black;
           margin: 0 5px;
           transition: .5s;
-          color: #111;
           border-radius: 4px;
           cursor: pointer; }
           .seccionProductos .container .card .contentBx .size span:hover {
@@ -1188,7 +981,7 @@ main .categoria {
           cursor: pointer; }
         .seccionProductos .container .card .contentBx .buy .price {
           font-size: 25px;
-          color: white; }
+          color: black; }
         .seccionProductos .container .card .contentBx .buy .action {
           position: absolute;
           bottom: 300px;
@@ -1206,6 +999,8 @@ main .categoria {
             cursor: pointer;
             opacity: 0;
             transition: 0.5s; }
+            .seccionProductos .container .card .contentBx .buy .action li a {
+              position: relative; }
             .seccionProductos .container .card .contentBx .buy .action li span {
               position: absolute;
               right: 50px;
@@ -1436,7 +1231,7 @@ footer {
   justify-content: space-around;
   width: 100%;
   height: 200px;
-  background-image: linear-gradient(to right, orange, orange, black); }
+  background-image: linear-gradient(to right, #db7500, #ffb94f, #db7500); }
   footer .infoFooter {
     margin: auto 0px;
     list-style: none; }

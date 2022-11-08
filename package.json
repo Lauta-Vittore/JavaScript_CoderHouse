@@ -22,5 +22,8 @@
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.20",
     "nodesass": "^0.0.2-security"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
   }
 }

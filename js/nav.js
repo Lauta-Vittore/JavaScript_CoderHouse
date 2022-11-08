@@ -9,7 +9,7 @@ domNav.innerHTML += `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   </button>
   <div class="collapse navbar-collapse col_3" id="navbarScroll">
     <div class="conteinerBuscador col-6">
-        <input type="text" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="../pic/lupa.png" alt="" style="width: 17px;"></label>
+        <input type="text" id="formulario" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="../pic/lupa.png" id="boton" alt="" style="width: 17px;"></label>
     </div>
     <div class="conteiner col-6">
         
@@ -18,7 +18,7 @@ domNav.innerHTML += `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../pages/productos.html">Productos</a>
+            <a class="nav-link" href="#productos">Productos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../pages/Contacto.html">Contacto</a>

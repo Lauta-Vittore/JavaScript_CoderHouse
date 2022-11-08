@@ -66,13 +66,14 @@
                     contacto contigo lo antes posible.
                 </h1>
             </section>
-            <form class="formContact">
-                        <input id="nombre" type="text" placeholder="Nombre">
-                        <input id="email" type="email" placeholder="Email">
-                        <input id="telefono" type="number" placeholder="Teléfono">
-                        <input id="mensaje" type="text" placeholder="Mensaje">
+            <form class="formContact" action="https://formsubmit.co/lautarotin@gmail.com" method="POST">
+                        <input id="nombre" type="text" placeholder="Nombre" name="nombre">
+                        <input id="email" type="email" placeholder="Email" name="email">
+                        <input id="telefono" type="number" placeholder="Teléfono" name="telefono">
+                        <input id="mensaje" type="text" placeholder="Mensaje" name="mensaje">
+                        <button class="btnFormContacto" data-bs-toggle="modal" href="#exampleModalToggle" role="button" type="submit" value="Enviar">Enviar</button>
             </form>
-            <button class="btnFormContacto" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Enviar</button>
+            
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
