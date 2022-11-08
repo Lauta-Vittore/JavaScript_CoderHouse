@@ -16,21 +16,21 @@ domNav.innerHTML += `
         
         <ul class="navbar-nav me-auto my-2 my-lg-0 col" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#productos">Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../pages/Contacto.html">Contacto</a>
+            <a class="nav-link" href="pages/Contacto.html">Contacto</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Más
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../pages/sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a class="dropdown-item" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+                <li><a class="dropdown-item" href="pages/sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a class="dropdown-item" href="pages/preguntas.html">Preguntas frecuentes</a></li>
                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal3">Contacto Soporte</a></li>
             </ul>
         </li>
