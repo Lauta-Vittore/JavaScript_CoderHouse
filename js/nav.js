@@ -34,7 +34,7 @@ domNav.innerHTML += `
                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal3">Contacto Soporte</a></li>
             </ul>
         </li>
-            <img width="30" height="30" src="../pic/carro-de-compras.png" id="img-carrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <img width="30" height="30" src="pic/carro-de-compras.png" id="img-carrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <span id="contadorCarrito">0</span>    
         </ul>
         
