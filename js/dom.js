@@ -13,7 +13,7 @@ let productosSeleccionados = [];
 let botonVaciar= document.getElementById('vaciar-carrito')
 let contadorCarrito = document.getElementById('contadorCarrito')
 let precioTotal = document.getElementById('precioTotal')
-let tallasId = document.getElementById('#tallasId')
+
 
 
 
@@ -66,7 +66,7 @@ function printData(object) {
                                 <ul class="action">
                                     <li><a href="#" ><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;" class="agregarCarro" id="${element.id}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a><span>Añadir al carrito</span></li>
                                     
-                                    <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                                    <li><a href="#" class="verProducto" id="${element.id}"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
                                     
                                     <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
                                     
@@ -168,20 +168,44 @@ function agregarProductoAlcarro() {
     listaCarrito.innerHTML = ``;
     
     productosSeleccionados.forEach((element,index) => {
-        
-        listaCarrito.innerHTML += `<tr>
-            <td><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="60px"></td>
-            <td>${element.titulo}</td>
-            <td class="text-center">$${element.precio * element.cantidad}</td>
-            <td class="text-center"><span id="cantidad">${element.cantidad}</span></td>
-            <td class="text-center" ><a href="#" id="${element.id}" class="borrar-curso" data-id="1">X</a></td>
+        const divCarrito = document.createElement('div')
+        divCarrito.classList.add('carro')
+        divCarrito.innerHTML += `<tr>
+            <div class="cont"><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="100px"></div>
+            <div class="carritoHead">
+                <div class="nombreProducto">${element.titulo}</div>
+                <div class="text-center cosas">  
+                    <div class="text-center">
+                        <button class="menos btnCant" id="${element.id}">-</button><span> ${element.cantidad}</span> <button class="mas btnCant" id="${element.id}">+</button>
+                    </div>
+                    <div class="text-center cont">
+                        <select id="talla${element.id}" class="text-center selector">
+                            <option value="default"> Talla </option>
+                        </select>
+                    </div>
+                    <div class="text-center cont precioProductoTotal"> $${element.precio * element.cantidad}</div>
+                </div>
+            </div>
+           
+           
+            
+            <div class="text-center cont"><a href="#" id="${element.id}" class="borrar-curso" data-id="1">X</a></div>
           </tr>`;
-    });
 
+          listaCarrito.appendChild(divCarrito)
+        let tallar= 'talla' + element.id 
+        let tallaId = document.getElementById(tallar)
+        for (let i = 0; i < element.talla.length; i++) {
+            let option = document.createElement("option"),
+                txt = document.createTextNode(element.talla[i])    
+            option.appendChild(txt)
+            tallaId.insertBefore(option, tallaId.lastChild )
+        }
+    });
     contadorCarrito.innerText = productosSeleccionados.length
     precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)
     // Seleccionamos el boton eliminar 
-    let buttonDelete = document.querySelectorAll('#listaCarrito tr td a');
+    let buttonDelete = document.querySelectorAll('.borrar-curso');
     
     // Lo recorremos 
     buttonDelete.forEach(element => {
@@ -196,7 +220,43 @@ function agregarProductoAlcarro() {
         })
     })
 
+    let buttonMenos = document.querySelectorAll('.menos');
+    buttonMenos.forEach(element => {
+        element.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let id = e.target.id
+            // Eliminar del arreglo del carrito,Filter retorna un nuevo Array
+            // Filter si es distinto lo excluye 
+            let productobaja = productosSeleccionados.filter( producto => producto.id == id );
+            const prod = productobaja.map (prod =>{
+                    prod.cantidad--
+                    if (prod.cantidad == 0) {
+                        productosSeleccionados = productosSeleccionados.filter( producto => producto.id !== id );    
+                    }
+            })
+            agregarProductoAlcarro()
+        })
+    })
+
+    let buttonMas = document.querySelectorAll('.mas');
+    buttonMas.forEach(element => {
+        element.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let id = e.target.id
+            // Eliminar del arreglo del carrito,Filter retorna un nuevo Array
+            // Filter si es distinto lo excluye 
+            let productobaja = productosSeleccionados.filter( producto => producto.id == id );
+            console.log(productobaja);
+            const prod = productobaja.map (prod =>{
+                    prod.cantidad++
+            })
+            agregarProductoAlcarro()
+        })
+    })
+    
+
     sincronizarConLocalStorage();
+    
 }
 
 
@@ -246,5 +306,6 @@ function escucharBoton() {
         });
     });
 }
+
 
 export default escucharBoton;

@@ -1,6 +1,7 @@
 let domNav = document.querySelector("#domNav");
 
-domNav.innerHTML += `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+domNav.innerHTML += `
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container-fluid">
   <a class="navbar-brand name col-1" href="#">Bukee</a>
   
@@ -52,20 +53,9 @@ domNav.innerHTML += `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 
                 <div id="carrito">
                         
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Borrar</th>
-                          </tr>
-                        </thead>
-                        <tbody id="listaCarrito">
-
-                        </tbody>
-                      </table>
+                    
+                        <div id="listaCarrito">
+                        </div>
                       <div class="d-grid gap-2">
                         <p>precio total: $<span id="precioTotal">0</span></p>
                         <a href="#" class="btn btn-secondary" id="vaciar-carrito">Vaciar Carrito</a>

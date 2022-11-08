@@ -7,6 +7,48 @@
   font-size: 20px;
   margin: 10px; }
 
+.offcanvas {
+  background-color: orange; }
+  .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #20052c;
+    color: white;
+    border-radius: 20px;
+    margin-top: 5px;
+    height: 100px; }
+    .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .selector {
+      background-color: transparent;
+      color: white;
+      border: orange solid 1px;
+      border-radius: 6px;
+      cursor: pointer; }
+      .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .selector option {
+        color: black; }
+    .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .cont {
+      margin: auto 5px; }
+      .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .cont .imgFitMiniatura {
+        margin: 5px; }
+    .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .carritoHead {
+      display: flex;
+      flex-direction: column;
+      margin: auto 0; }
+      .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .carritoHead .nombreProducto {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin: 10px; }
+      .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .carritoHead .cosas {
+        display: flex;
+        flex-direction: row; }
+        .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro .carritoHead .cosas .btnCant {
+          background-color: transparent;
+          border: orange solid 1px;
+          border-radius: 6px;
+          width: 15px;
+          color: white; }
+
 * {
   padding: 0;
   margin: 0; }

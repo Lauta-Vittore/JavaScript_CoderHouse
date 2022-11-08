@@ -1,0 +1,51 @@
+.offcanvas{
+    background-color: orange;
+    .offcanvas-body .submenu #carrito #listaCarrito .carro{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #20052c;
+        color: white;
+        border-radius: 20px;
+        margin-top: 5px;
+        height: 100px;
+    .selector{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border: orange solid 1px;
+        border-radius: 6px;
+        cursor: pointer;
+        option{
+            color: black;
+        }
+    }
+    .cont{
+        margin: auto 5px;
+        .imgFitMiniatura{
+            margin: 5px;
+        }
+    }
+    .carritoHead{
+        display: flex;
+        flex-direction: column;
+        margin: auto 0;
+        .nombreProducto{
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            margin: 10px;
+        }
+        .cosas{
+            display: flex;
+            flex-direction: row;
+            .btnCant{
+                background-color: transparent;
+                border: orange solid 1px;
+                border-radius: 6px;
+                width: 15px;
+                color: white;
+            }
+        }
+    }
+}
+}
