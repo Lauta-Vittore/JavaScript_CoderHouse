@@ -71,7 +71,7 @@ let productos = [
         descripcion: "ZAPATILLAS NIKE MODELO XXXXX",
         talla: ["38", "40", "42"],
         precio: 1111,
-        foto: "../../pic/zapatillas2w.webp",
+        foto: "pic/zapatillas2w.webp",
         seccion: "paraTi",
         tipo: "zapatilla",
         cantidad: 1,
