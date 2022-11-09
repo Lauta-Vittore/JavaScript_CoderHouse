@@ -3,13 +3,19 @@ let domNav = document.querySelector("#domNav");
 domNav.innerHTML += `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container-fluid">
-  <a class="navbar-brand name col-1" href="#">Bukee</a>
+  <a class="navbar-brand col-2" href="#"><div class="name">
+                                                  <div class="letter">B</div>
+                                                  <div class="letter">U</div>
+                                                  <div class="letter">K</div>
+                                                  <div class="letter">E</div>
+                                                  <div class="letter">E</div>
+</div></a>
   
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse col_3" id="navbarScroll">
-    <div class="conteinerBuscador col-6">
+    <div class="conteinerBuscador col-5">
         <input type="text" id="formulario" placeholder="Buscar productos, Categoría, etc"><label for="#"><img src="pic/lupa.png" id="boton" alt="" style="width: 17px;"></label>
     </div>
     <div class="conteiner col-6">
