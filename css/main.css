@@ -242,8 +242,6 @@ main .categoria {
     color: black; }
     main .categoria .buzos h4 {
       margin-top: 100px; }
-  main .categoria .buzos:hover {
-    opacity: 0.8; }
   main .categoria .zapatillas {
     grid-area: zapatillas;
     background-color: yellowgreen;
@@ -255,8 +253,6 @@ main .categoria {
     text-align: center;
     font-size: 100px;
     color: black; }
-  main .categoria .zapatillas:hover {
-    opacity: 0.8; }
   main .categoria .cuellos {
     grid-area: cuellos;
     background-color: #32bbcd;
@@ -269,8 +265,6 @@ main .categoria {
     text-align: center;
     color: white;
     font-size: 50px; }
-  main .categoria .cuellos:hover {
-    opacity: 0.8; }
   main .categoria .remeras {
     grid-area: remeras;
     background-color: #cd32c0;
@@ -283,8 +277,6 @@ main .categoria {
     text-align: center;
     font-size: 50px;
     color: black; }
-  main .categoria .remeras:hover {
-    opacity: 0.8; }
   main .categoria .accesorios {
     grid-area: accesorio;
     background-color: lightgray;
@@ -296,8 +288,6 @@ main .categoria {
     text-align: center;
     font-size: 50px;
     color: white; }
-  main .categoria .accesorios:hover {
-    opacity: 0.8; }
   main .categoria .btnVerCategoria {
     width: 200px;
     height: 50px;
@@ -311,6 +301,25 @@ main .categoria {
     font-size: 45px;
     text-align: center;
     background-color: rgba(128, 128, 128, 0.39); }
+  main .categoria .animado {
+    opacity: 0;
+    transition: all 0.5s; }
+  main .categoria .animadoIzq {
+    animation: mostrarIzq 1s; }
+  main .categoria .animadoDer {
+    animation: mostrarDer 1s; }
+
+@keyframes mostrarIzq {
+  0% {
+    transform: translateX(1000px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes mostrarDer {
+  0% {
+    transform: translateX(-1000px); }
+  100% {
+    transform: translateX(0); } }
 
 /* termina css para categorias */
 .modal .whatsapp {

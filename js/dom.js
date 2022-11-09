@@ -1,4 +1,6 @@
 import productos from './db/db.js';
+import anime from '/js/lib/anime-master/lib/anime.es.js';
+
 let domParaTi = document.querySelector("#domParaTi");        
 let domMasVendido = document.querySelector("#domMasVendido")
 let domProductos = document.querySelector("#domProductos")
@@ -207,16 +209,14 @@ function agregarProductoAlcarro() {
     precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)
     // Seleccionamos el boton eliminar 
     let buttonDelete = document.querySelectorAll('.borrar-curso');
-    
     // Lo recorremos 
-    buttonDelete.forEach(element => {
+    buttonDelete.forEach(element => {       
         element.addEventListener('click',(e)=>{
             e.preventDefault();
             let id = e.target.id
             // Eliminar del arreglo del carrito,Filter retorna un nuevo Array
             // Filter si es distinto lo excluye 
             productosSeleccionados = productosSeleccionados.filter( producto => producto.id !== id );
-            console.log('Salida de productosSeleccionados', productosSeleccionados)
             agregarProductoAlcarro()
         })
     })
