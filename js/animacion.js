@@ -21,13 +21,15 @@ let categoria = document.querySelector(".categoria");
 
 function mostrarScroll() {
     let scroll = document.documentElement.scrollTop
-    for (let i = 0; i < animado.length; i++) {
-        let alturaAnimado = categoria.offsetTop;
-        if (alturaAnimado -300 < scroll) {
+    let alturaAnimado = categoria.offsetTop;
+    if (alturaAnimado -300 < scroll) {
+        
+        for (let i = 0; i < animado.length; i++) {
             animado[i].style.opacity = 1;
-            animadoI[i].classList.add("animadoIzq")
-            animadoD.classList.add("animadoDer")
-        }            
+            animadoI[i].classList.add('animadoIzq')  
+        } 
+        animadoD.classList.add('animadoDer')
+                
     }
    
 
