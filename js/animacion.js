@@ -26,7 +26,7 @@ function mostrarScroll() {
         
         for (let i = 0; i < animado.length; i++) {
             animado[i].style.opacity = 1;
-            animadoI[i].classList.add('animadoIzq')  
+            animado[i].classList.add('animadoIzq')  
         } 
         animadoD.classList.add('animadoDer')
                 
