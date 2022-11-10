@@ -1,4 +1,4 @@
-/* import anime from '../js/lib/anime-master/lib/anime.es.js';
+import anime from '../js/lib/anime-master/lib/anime.es.js';
 
 
 var opac = anime({
@@ -12,7 +12,7 @@ var opac = anime({
     direction: 'alternate',
     loop: true
   });
- */
+
 
 let animado = document.querySelectorAll(".animado");
 let animadoI = document.querySelectorAll(".animadoI");

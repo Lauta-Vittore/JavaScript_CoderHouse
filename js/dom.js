@@ -1,6 +1,4 @@
 import productos from './db/db.js';
-import anime from '/js/lib/anime-master/lib/anime.es.js';
-
 let domParaTi = document.querySelector("#domParaTi");        
 let domMasVendido = document.querySelector("#domMasVendido")
 let domProductos = document.querySelector("#domProductos")
