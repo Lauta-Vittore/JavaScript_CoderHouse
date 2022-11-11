@@ -760,13 +760,33 @@ main .categoria {
 
 /* fin pag productos */
 /* pag contactos */
+.animadoCont {
+  animation: mostrarContacto 1s; }
+
+@keyframes mostrarContacto {
+  0% {
+    transform: translateX(1000px); }
+  100% {
+    transform: translateX(0); } }
+
 .conteinerContactos {
   background-image: url(../pic/fondoNosotros.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: auto; }
+  height: 950px;
+  opacity: 0;
+  border: orange 10px solid;
+  border-radius: 20px;
+  margin: 10px 20px; }
+  .conteinerContactos h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Cedarville Cursive', cursive;
+    color: orange;
+    margin: 20px; }
   .conteinerContactos .formContacto {
     width: 50%;
     text-align: center;

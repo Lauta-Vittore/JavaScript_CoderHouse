@@ -28,7 +28,7 @@ domNav.innerHTML += `
             <a class="nav-link" href="#productos">Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/Contacto.html">Contacto</a>
+            <a class="nav-link" href="#contacto">Contacto</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
