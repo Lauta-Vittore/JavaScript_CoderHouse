@@ -54,6 +54,7 @@
           <button class="btnCompra"><img src="pic/envio.png" alt="envio" width="40px"> Envíos a todo el país</button>
           <button class="btnCompra"><img src="pic/segura.png" alt="segura" width="40px"> Compra asegurada</button>
         </section>
+        <h3 class="mover">CATEGORIAS</h3>
         <section class="categoria" id="categorias">
           <div class="buzos animado animadoD">
             <h4 class="tipoCategoria">BUZOS</h4>
@@ -172,11 +173,30 @@
         </div>
         <ul class="navegacionFooter">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/productos.html">Productos</a></li>
+            <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Comentarios</a></li>
             <li><a href="pages/Contacto.html">Contacto</a></li>
             <li><a href="pages/preguntas.html">Preguntas frecuentes</a></li>
         </ul>
     </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="api">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <a class="btnWhatsapp" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="pic/whatsapp.png" alt="" style="width: 60px;"></a> 
     
 <!-- JavaScript Bundle with Popper -->
@@ -187,5 +207,6 @@
 <script src="js/verProducto.js"></script>
 <script src="js/lib/anime-master/lib/anime.min.js"></script>
 <script type="module" src="js/animacion.js"></script> 
+<script src="js/api/api.js"></script>
 </body>
 </html>

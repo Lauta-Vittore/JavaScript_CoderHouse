@@ -72,6 +72,9 @@ body {
       line-height: 55px;
       bottom: 30px;
       right: 30px; }
+  body #api .comentarios {
+    background-color: #20052c;
+    color: white; }
 
 /* css para nav */
 .row {

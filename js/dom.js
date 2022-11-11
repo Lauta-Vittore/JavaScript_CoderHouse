@@ -1,4 +1,7 @@
 import productos from './db/db.js';
+import animacionCard from './animacion.js'
+import animacionCarroDelete from './animacionCarroDelete.js'
+
 let domParaTi = document.querySelector("#domParaTi");        
 let domMasVendido = document.querySelector("#domMasVendido")
 let domProductos = document.querySelector("#domProductos")
@@ -210,6 +213,7 @@ function agregarProductoAlcarro() {
     // Lo recorremos 
     buttonDelete.forEach(element => {       
         element.addEventListener('click',(e)=>{
+            animacionCarroDelete()
             e.preventDefault();
             let id = e.target.id
             // Eliminar del arreglo del carrito,Filter retorna un nuevo Array
@@ -302,6 +306,7 @@ function escucharBoton() {
             e.preventDefault();
             let id = e.target.id;
             buscarProductos(id, productos);
+            animacionCard();
         });
     });
 }

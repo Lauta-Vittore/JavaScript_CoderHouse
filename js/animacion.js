@@ -13,6 +13,7 @@ var opac = anime({
     loop: true
   });
 
+  
 
 let animado = document.querySelectorAll(".animado");
 let animadoI = document.querySelectorAll(".animadoI");
@@ -28,11 +29,25 @@ function mostrarScroll() {
             animado[i].style.opacity = 1;
             animado[i].classList.add('animadoIzq')  
         } 
-        animadoD.classList.add('animadoDer')
-                
+        animadoD.classList.add('animadoDer')             
     }
+}
+function animacionCard() {
+    anime({
+        targets: '.carro',
+        scale: [
+          {value: .1, easing: 'easeOutSine', duration: 500},
+          {value: 1, easing: 'easeInOutQuad', duration: 1200}
+        ],
+        delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
+      });
+}
    
 
-}
+
 
 window.addEventListener('scroll', mostrarScroll)
+
+export default animacionCard
+
+
