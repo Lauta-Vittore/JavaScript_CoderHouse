@@ -36,6 +36,14 @@ body{
         background-color: #20052c;
         color: white;
     }
+    .titulo3{
+        text-align: center;
+        font-size: 60px;
+        font-weight: 600;
+        font-family: 'Cedarville Cursive', cursive;
+        color: white;
+        margin: 20px; 
+    }
 }
 @import "nav";
 @import "infoCompras";
