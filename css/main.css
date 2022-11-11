@@ -1034,6 +1034,8 @@ footer {
 @media (max-width: 768px) {
   body {
     width: 100%; }
+    body .titulo3 {
+      display: none; }
     body .carousel {
       width: 100%; }
     body .infoCompra .btnCompra {

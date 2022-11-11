@@ -343,7 +343,9 @@ body{
 @media(max-width:768px){
     body{
         width: 100%;
-    
+    .titulo3{
+        display: none; 
+    }
     .carousel{
         width: 100%;
     }
