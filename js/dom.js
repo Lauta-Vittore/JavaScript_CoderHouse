@@ -4,13 +4,11 @@ import animacionCarroDelete from './animacionCarroDelete.js'
 
 let domParaTi = document.querySelector("#domParaTi");        
 let domMasVendido = document.querySelector("#domMasVendido")
-let domProductos = document.querySelector("#domProductos")
 let domRemeras = document.querySelector("#domRemeras")
 let domBuzo = document.querySelector("#domBuzo")
 let domZapatillas = document.querySelector("#domZapatillas")
 let domAccesorio = document.querySelector("#domAccesorio")
 let domCuellito = document.querySelector("#domCuellito")
-
 let listaCarrito = document.querySelector("#listaCarrito");
 let productosSeleccionados = [];
 let botonVaciar= document.getElementById('vaciar-carrito')
