@@ -36,7 +36,7 @@ function agregarProductoAlcarro() {
         const divCarrito = document.createElement('div')
         divCarrito.classList.add('carro')
         divCarrito.innerHTML += `<tr>
-            <div class="cont"><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="100px"></div>
+            <div class="cont"><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="80px"></div>
             <div class="carritoHead">
                 <div class="nombreProducto">${element.titulo}</div>
                 <div class="text-center cosas">  
@@ -58,7 +58,14 @@ function agregarProductoAlcarro() {
           </tr>`;
 
           listaCarrito.appendChild(divCarrito)
-       
+        let tallar= 'talla' + element.id 
+        let tallaId = document.getElementById(tallar)
+        for (let i = 0; i < element.talla.length; i++) {
+            let option = document.createElement("option"),
+                txt = document.createTextNode(element.talla[i])    
+            option.appendChild(txt)
+            tallaId.insertBefore(option, tallaId.lastChild )
+        }
     });
     contadorCarrito.innerText = productosSeleccionados.length
     precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)
