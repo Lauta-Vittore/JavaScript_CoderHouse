@@ -1,7 +1,7 @@
 let contact = document.querySelector('.conteinerContactos')
 
 
-const contactoDiv = document.createElement('div')
+const contactoDiv = document.createElement('div')        //inserto template para contacto
 contactoDiv.innerHTML += `<section class="formContacto">
 <h1>Si quieres información sobre cualquiera de nuestros
     productos o estás interesado en su distribución,
@@ -90,7 +90,7 @@ contactoDiv.innerHTML += `<section class="formContacto">
 </div>`
 
 function mostrarContacto() {
-    let scroll = document.documentElement.scrollTop
+    let scroll = document.documentElement.scrollTop        //animacion para que el template de contacto aparezca desde la derecha
     let alturaAnimado = contact.offsetTop;
     if (alturaAnimado -300 < scroll) {
         contact.style.opacity = 1;

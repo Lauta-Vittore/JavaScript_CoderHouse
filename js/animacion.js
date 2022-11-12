@@ -1,7 +1,7 @@
 import anime from '../js/lib/anime-master/lib/anime.es.js';
 
 
-var opac = anime({
+var opac = anime({                       //utilizo la libreria anime.js para animar el logo 
     targets: '.letter',
     opacity:1,
     scale:1,
@@ -21,7 +21,7 @@ let animadoD = document.querySelector(".animadoD");
 let categoria = document.querySelector(".categoria");
 
 function mostrarScroll() {
-    let scroll = document.documentElement.scrollTop
+    let scroll = document.documentElement.scrollTop            //animacion para categorias, aparecen de afuera hacia adentro
     let alturaAnimado = categoria.offsetTop;
     if (alturaAnimado -300 < scroll) {
         
@@ -33,7 +33,7 @@ function mostrarScroll() {
     }
 }
 function animacionCard() {
-    anime({
+    anime({                                                           //animacion de productos añadidos al carrito con libreria anime
         targets: '.carro',
         scale: [
           {value: .1, easing: 'easeOutSine', duration: 500},
@@ -46,7 +46,7 @@ function animacionCard() {
 
 
 
-window.addEventListener('scroll', mostrarScroll)
+window.addEventListener('scroll', mostrarScroll)   //al hacer scroll llamo a la funcion mostrarScroll
 
 export default animacionCard
 

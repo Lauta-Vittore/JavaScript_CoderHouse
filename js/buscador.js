@@ -10,14 +10,14 @@ const buscado = document.querySelector('#buscado')
 
 
 const filtrar = () =>{
-    main.style.display = 'none'
+    main.style.display = 'none'             //borro el contenido de la pagina para insertar solo los productos buscados
     resultado.innerHTML = ``;
-    const texto = formulario.value.toLowerCase();
-    buscado.innerHTML = `<h2 class="titulo2"> Resultados para: ${formulario.value}</h2>`;
+    const texto = formulario.value.toLowerCase();  //paso a minuscula el texto
+    buscado.innerHTML = `<h2 class="titulo2"> Resultados para: ${formulario.value}</h2>`;  
     for (let producto of productos) {
         let nombre = producto.titulo.toLowerCase();
-        if (nombre.indexOf(texto) !== -1) {
-            resultado.innerHTML += `
+        if (nombre.indexOf(texto) !== -1) {         //inserto la card de los productos que coinciden con la busqueda
+            resultado.innerHTML += `                    
             
                     <div class="container">
                         <div class="card">

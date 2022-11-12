@@ -34,7 +34,7 @@ function agregarProductoAlcarro() {
     
     productosSeleccionados.forEach((element,index) => {
         const divCarrito = document.createElement('div')
-        divCarrito.classList.add('carro')
+        divCarrito.classList.add('carro')       //card de producto añadido al carrito
         divCarrito.innerHTML += `<tr>
             <div class="cont"><img class="imgFitMiniatura" src="${element.foto}" alt="${element.titulo}" width="80px"></div>
             <div class="carritoHead">
@@ -58,8 +58,8 @@ function agregarProductoAlcarro() {
           </tr>`;
 
           listaCarrito.appendChild(divCarrito)
-        let tallar= 'talla' + element.id 
-        let tallaId = document.getElementById(tallar)
+        let tallar= 'talla' + element.id    
+        let tallaId = document.getElementById(tallar)               //creo option para seleccionar la talla 
         for (let i = 0; i < element.talla.length; i++) {
             let option = document.createElement("option"),
                 txt = document.createTextNode(element.talla[i])    
@@ -68,9 +68,9 @@ function agregarProductoAlcarro() {
         }
     });
     contadorCarrito.innerText = productosSeleccionados.length
-    precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)
+    precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0) //calculo de precio total del carrito
     // Seleccionamos el boton eliminar 
-    let buttonDelete = document.querySelectorAll('.borrar-curso');
+    let buttonDelete = document.querySelectorAll('.borrar-curso');      
     // Lo recorremos 
     buttonDelete.forEach(element => {       
         element.addEventListener('click',(e)=>{
@@ -88,11 +88,9 @@ function agregarProductoAlcarro() {
         element.addEventListener('click',(e)=>{
             e.preventDefault();
             let id = e.target.id
-            // Eliminar del arreglo del carrito,Filter retorna un nuevo Array
-            // Filter si es distinto lo excluye 
             let productobaja = productosSeleccionados.filter( producto => producto.id == id );
             const prod = productobaja.map (prod =>{
-                    prod.cantidad--
+                    prod.cantidad--             //resto la cantidad a comprar
                     if (prod.cantidad == 0) {
                         productosSeleccionados = productosSeleccionados.filter( producto => producto.id !== id );    
                     }
@@ -111,7 +109,7 @@ function agregarProductoAlcarro() {
             let productobaja = productosSeleccionados.filter( producto => producto.id == id );
             console.log(productobaja);
             const prod = productobaja.map (prod =>{
-                    prod.cantidad++
+                    prod.cantidad++         //sumo la cantidad a comprar
             })
             agregarProductoAlcarro()
         })
@@ -123,7 +121,7 @@ function agregarProductoAlcarro() {
 }
 
 function buscarProductos ( idProducto, buscarProducto ){
-    const existe = productosSeleccionados.some(prod => prod.id === idProducto)
+    const existe = productosSeleccionados.some(prod => prod.id === idProducto)    
     if(existe){
         const prod = productosSeleccionados.map (prod =>{
             if(prod.id === idProducto){
