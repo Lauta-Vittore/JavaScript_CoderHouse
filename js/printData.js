@@ -75,8 +75,11 @@ function printData(object) {
                                 <h3>${element.descripcion}</h3>
                             </div>
                             <div class="size">
-                            <h3 id="tallaId">tallas</h3>
+                            <h3>tallas</h3>
+
+                                <div id="tallaId">
                                 <span>${element.talla}</span>
+                                </div>
                             </div>
                             <div class="buy">
                                 <div class="price">
@@ -99,15 +102,14 @@ function printData(object) {
             `;
            
 
+            
         
             lugarDeDom(element, div);   // llamo a la funcion para dividir en que lugar va la card
-
-             
+            
+            
     });
-    
-}
- 
 
+}
 function lugarDeProd(element, div) {
     if (element.tipo == "remera") {     // si la seccion es para ti se inserta en la seccion para ti 
         domRemeras.appendChild(div)

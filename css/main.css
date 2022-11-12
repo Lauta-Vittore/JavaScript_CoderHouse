@@ -9,6 +9,8 @@
 
 .offcanvas {
   background-color: orange; }
+  .offcanvas #precioTotal {
+    font-size: 35px; }
   .offcanvas .offcanvas-body .submenu #carrito #listaCarrito .carro {
     display: flex;
     flex-direction: row;
@@ -478,10 +480,10 @@ main .categoria {
             font-size: 10px;
             text-transform: uppercase; }
         .paraTi .container .card .contentBx .size span {
-          width: 26px;
+          width: auto;
           height: 26px;
+          padding: 5px;
           text-align: center;
-          line-height: 26px;
           font-size: 14px;
           display: inline-block;
           color: white;
@@ -684,10 +686,10 @@ main .categoria {
             font-size: 10px;
             text-transform: uppercase; }
         .seccionProductos .container .card .contentBx .size span {
-          width: 26px;
+          width: auto;
           height: 26px;
+          padding: 5px;
           text-align: center;
-          line-height: 26px;
           font-size: 14px;
           display: inline-block;
           color: white;

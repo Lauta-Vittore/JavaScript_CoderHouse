@@ -58,14 +58,7 @@ function agregarProductoAlcarro() {
           </tr>`;
 
           listaCarrito.appendChild(divCarrito)
-        let tallar= 'talla' + element.id 
-        let tallaId = document.getElementById(tallar)
-        for (let i = 0; i < element.talla.length; i++) {
-            let option = document.createElement("option"),
-                txt = document.createTextNode(element.talla[i])    
-            option.appendChild(txt)
-            tallaId.insertBefore(option, tallaId.lastChild )
-        }
+       
     });
     contadorCarrito.innerText = productosSeleccionados.length
     precioTotal.innerText = productosSeleccionados.reduce((acc, prod) => acc + (prod.precio*prod.cantidad), 0)

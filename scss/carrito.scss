@@ -1,5 +1,8 @@
 .offcanvas{
     background-color: orange;
+    #precioTotal{
+        font-size: 35px;
+    }
     .offcanvas-body .submenu #carrito #listaCarrito .carro{
         display: flex;
         flex-direction: row;
@@ -47,5 +50,7 @@
             }
         }
     }
+    
+    
 }
 }
